@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleAlert.Page1">
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout Padding="50" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" >
+                    <Button x:Name="startBtn"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            Clicked="StartBtn_Clicked"
+                            Text="Show Popup" 
+                            WidthRequest="150"
+                            IsVisible="True"/>
+                </StackLayout>
+            </StackLayout>
+            <ContentView x:Name="popupView" 
+                         BackgroundColor="#C0808080" 
+                         Padding="10, 0" 
+                         IsVisible="False" 
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                         AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200" BackgroundColor="Transparent">
+                        <Frame BackgroundColor="Azure" 
+                               WidthRequest="200"
+                               HeightRequest="200">
+                            <StackLayout>
+                                <Label Text="Here is the message of random PopUp"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="17"
+                                       TextColor="Black"
+                                       Padding="0,0,0,20"/>
+                                <Button Text="Ok"
+                                        WidthRequest="100"
+                                        HeightRequest="40"
+                                        VerticalOptions="End"
+                                        HorizontalOptions="Center"
+                                        BackgroundColor="DarkSlateGray"
+                                        Clicked="Button_Clicked"
+                                        />
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

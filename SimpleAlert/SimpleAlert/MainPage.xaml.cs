@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace SimpleAlert
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : Shell
     {
         public MainPage()
         {

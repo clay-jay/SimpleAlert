@@ -1,14 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SimpleAlert"
              x:Class="SimpleAlert.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="150"
+              BackgroundColor="#71D3FF">
+            <Label Text="This is your Header"
+                   FontSize="20"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Page1">
+        <Tab>
+            <ShellContent Title="Page1">
+                <local:Page1/>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
 
-</ContentPage>
+    <FlyoutItem Title="Page2">
+        <Tab>
+            <ShellContent>
+                <local:Page2/>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Page3">
+        <Tab>
+            <ShellContent>
+                <local:Page3/>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+</Shell>
