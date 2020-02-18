@@ -5,6 +5,9 @@
     <ContentPage.Content>
         <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <!--Note that Absolute layout properties is "X, Y, Width, Height"
+                    If you use LayoutFlags = "All", all of them will be proportional 
+                    You can use LayoutFlags to change this properties to pixels -->
                 <StackLayout Padding="50" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" >
                     <Button x:Name="startBtn"
                             HorizontalOptions="Center" 
@@ -21,6 +24,7 @@
                          IsVisible="False" 
                          AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
                          AbsoluteLayout.LayoutFlags="All">
+                <!--Use same properties for AbsoluteLayout to stack them on each other-->
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                     <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200" BackgroundColor="Transparent">
                         <Frame BackgroundColor="Azure" 
@@ -39,8 +43,7 @@
                                         VerticalOptions="End"
                                         HorizontalOptions="Center"
                                         BackgroundColor="DarkSlateGray"
-                                        Clicked="Button_Clicked"
-                                        />
+                                        Clicked="Button_Clicked"/>
                             </StackLayout>
                         </Frame>
 

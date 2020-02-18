@@ -15,6 +15,14 @@ namespace SimpleAlert
 		public Page3 ()
 		{
 			InitializeComponent ();
+            //To navigate through pages first need to set up the route 
+            Routing.RegisterRoute("Page4", typeof(Page4));
 		}
-	}
+
+        async private void Button_Clicked(object sender, EventArgs e)
+        {
+            //then just use async method to navigate
+            await Shell.Current.GoToAsync("Page4");
+        }
+    }
 }

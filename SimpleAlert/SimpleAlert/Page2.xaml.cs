@@ -19,18 +19,17 @@ namespace SimpleAlert
 
         private void BtnAlert_Clicked(object sender, EventArgs e)
         {
-            btnBack.IsVisible = true;
-            boxView.IsVisible = true;
-            label.IsVisible = true;
-            stackL.BackgroundColor = Color.FromHex("#C0808080");
+            alertBox.IsVisible = true;
         }
 
         private void BtnBack_Clicked(object sender, EventArgs e)
         {
-            btnBack.IsVisible = false;
-            boxView.IsVisible = false;
-            label.IsVisible = false;
-            stackL.BackgroundColor = Color.Transparent;
+            alertBox.IsVisible = false;
+        }
+
+        private void SystemAlert_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Alert", "Something is happening", "Ok");
         }
     }
 }

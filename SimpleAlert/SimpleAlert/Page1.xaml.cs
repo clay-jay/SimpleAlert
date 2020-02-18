@@ -19,6 +19,7 @@ namespace SimpleAlert
 
         private void StartBtn_Clicked(object sender, EventArgs e)
         {
+            //just switch IsVisible to imitate DisplayAlert()
             popupView.IsVisible = true;
         }
 

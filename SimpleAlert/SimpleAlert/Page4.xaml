@@ -1,15 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SimpleAlert.Page3">
+             x:Class="SimpleAlert.Page4">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" 
-                     HorizontalOptions="CenterAndExpand">
-            <Label Text="This is third Page"
+                     HorizontalOptions="CenterAndExpand" >
+            <Label Text="This is Page4"
                    HorizontalTextAlignment="Center"/>
-            <Button Text="Go to Page4"
-                    Clicked="Button_Clicked"
-                    WidthRequest="130"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
