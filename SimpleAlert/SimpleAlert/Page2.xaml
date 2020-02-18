@@ -9,11 +9,13 @@
                          HorizontalOptions="Center"
                          Grid.Column="0"
                          Grid.Row="0">
+                <!--This button imitates DisplayAlert-->
                 <Button x:Name="btnAlert"
                         Margin="50" 
                         WidthRequest="150" 
                         Text="Click" 
                         Clicked="BtnAlert_Clicked"/>
+                <!--This one shows DisplayAlert()-->
                 <Button x:Name="systemAlert"
                         Text="DisplayAlert"
                         Margin="50"
